@@ -1,0 +1,21 @@
+api_key             <- ""
+api_secret          <- ""
+access_token        <- ""
+access_token_secret <- ""
+
+library("ROAuth", lib.loc="~/R/win-library/3.4")
+library("twitteR", lib.loc="~/R/win-library/3.4")
+
+BolsonaroTop100fav <- favorites('jairbolsonaro', n = 100, max_id = NULL, since_id = NULL)
+LulaTop100fav <- favorites('lulapelobrasil', n = 100, max_id = NULL, since_id = NULL)
+silva_marinaTop100fav <- favorites('silva_marina', n = 100, max_id = NULL, since_id = NULL)
+geraldoalckminTop100fav <- favorites('geraldoalckmin', n = 100, max_id = NULL, since_id = NULL)
+joaoamoedonovoTop100fav <- favorites('joaoamoedonovo', n = 100, max_id = NULL, since_id = NULL)
+MichelTemerTop100fav <- favorites('MichelTemer', n = 100, max_id = NULL, since_id = NULL)
+ManuelaDavilaTop100fav <- favorites('ManuelaDavila', n = 100, max_id = NULL, since_id = NULL)
+cirogomesTop100fav <- favorites('cirogomes', n = 100, max_id = NULL, since_id = NULL)
+meirellesTop100fav <- favorites('meirelles', n = 100, max_id = NULL, since_id = NULL)
+GuilhermeBoulosTop100fav <- favorites('GuilhermeBoulos', n = 100, max_id = NULL, since_id = NULL)
+alvarodias_Top100fav <- favorites('alvarodias_', n = 100, max_id = NULL, since_id = NULL)
+CollorTop100fav <- favorites('Collor', n = 100, max_id = NULL, since_id = NULL)
+flaviogrTop100fav <- favorites('flaviogr', n = 100, max_id = NULL, since_id = NULL)
