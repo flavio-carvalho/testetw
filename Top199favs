@@ -1,0 +1,62 @@
+library(rtweet)
+library(tm)
+
+appname <- "xxx"
+## api key (example below is not a real key)
+key <- "xxx"
+## api secret (example below is not a real key)
+secret <- "xxx"
+## create token named "twitter_token"
+twitter_token <- create_token(
+  app = appname,
+  consumer_key = key,
+  consumer_secret = secret)
+
+#get_favorites(user, n = 200, since_id = NULL, max_id = NULL,  parse = TRUE, token = NULL)
+
+#Specifies the number of records to retrieve.
+#Defaults to 200. 3000 is the max number of favorites returned per token.
+#Due to suspended or deleted content, this function may return fewer tweets than the desired (n) number. 
+#Must be of length 1 or of length equal to the provided number of users.
+
+
+
+alvarodias_Fav <- get_favorites("alvarodias_", n = 199)
+cirogomesFav <- get_favorites("cirogomes", n = 199)
+CollorFav <- get_favorites("Collor", n = 199)
+flaviogrFav <- get_favorites("flaviogr", n = 199)
+geraldoalckminFav <- get_favorites("geraldoalckmin", n = 199)
+GuilhermeBoulosFav <- get_favorites("GuilhermeBoulos", n = 199)
+jairbolsonaroFav <- get_favorites("jairbolsonaro", n = 199)
+joaoamoedonovoFav <- get_favorites("joaoamoedonovo", n = 199)
+lulapelobrasilFav <- get_favorites("lulapelobrasil", n = 199)
+ManuelaDavilaFav <- get_favorites("ManuelaDavila", n = 199)
+meirellesFav <- get_favorites("meirelles", n = 199)
+MichelTemerFav <- get_favorites("MichelTemer", n = 199)
+silva_marinaFav <- get_favorites("silva_marina", n = 199)
+
+#dfCorpus = Corpus(VectorSource(df$x)) 
+alvarodias_FavCorpus = Corpus(VectorSource(alvarodias_Fav$text)) 
+cirogomesFavCorpus = Corpus(VectorSource(cirogomesFav$text)) 
+flaviogrFavCorpus = Corpus(VectorSource(flaviogrFav$text)) 
+geraldoalckminFavCorpus = Corpus(VectorSource(geraldoalckminFav$text)) 
+GuilhermeBoulosFavCorpus = Corpus(VectorSource(GuilhermeBoulosFav$text)) 
+jairbolsonaroFavCorpus = Corpus(VectorSource(jairbolsonaroFav$text)) 
+lulapelobrasilFavCorpus = Corpus(VectorSource(lulapelobrasilFav$text)) 
+ManuelaDavilaFavCorpus = Corpus(VectorSource(ManuelaDavilaFav$text)) 
+MichelTemerFavCorpus = Corpus(VectorSource(MichelTemerFav$text)) 
+silva_marinaFavCorpus = Corpus(VectorSource(silva_marinaFav$text)) 
+
+
+#writeLines(as.character(mycorpus), con="mycorpus.txt")
+
+writeLines(as.character(alvarodias_FavCorpus), con="alvarodias_FavCorpus.txt")
+writeLines(as.character(cirogomesFavCorpus), con="cirogomesFavCorpus.txt")
+writeLines(as.character(flaviogrFavCorpus), con="flaviogrFavCorpus.txt")
+writeLines(as.character(geraldoalckminFavCorpus), con="geraldoalckminFavCorpus.txt")
+writeLines(as.character(GuilhermeBoulosFavCorpus), con="GuilhermeBoulosFavCorpus.txt")
+writeLines(as.character(jairbolsonaroFavCorpus), con="jairbolsonaroFavCorpus.txt")
+writeLines(as.character(lulapelobrasilFavCorpus), con="lulapelobrasilFavCorpus.txt")
+writeLines(as.character(ManuelaDavilaFavCorpus), con="ManuelaDavilaFavCorpus.txt")
+writeLines(as.character(MichelTemerFavCorpus), con="MichelTemerFavCorpus.txt")
+writeLines(as.character(silva_marinaFavCorpus), con="silva_marinaFavCorpus.txt")
